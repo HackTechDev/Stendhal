@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="../../tileset/ground/brown_paving.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/ground/brown_paving.png" trans="ffffff" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="3" name="../../tileset/building/wall/int_blue_green.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/wall/int_blue_green.png" trans="ff00ff" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="19" name="../../tileset/building/wall/int_green_blue_2.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/wall/int_green_blue_2.png" trans="ff00ff" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="27" name="../../tileset/building/entrance/blue_green.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/entrance/blue_green.png" trans="ff00ff" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="35" name="../../tileset/building/wall/int_green_blue.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/wall/int_green_blue.png" trans="ff00ff" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="51" name="../../tileset/plant/bush/bushes.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/plant/bush/bushes.png" trans="ffffff" width="160" height="64"/>
+ </tileset>
+ <tileset firstgid="61" name="../../tileset/building/entrance/int_iron_bars.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/entrance/int_iron_bars.png" trans="ff00ff" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="73" name="../../tileset/item/chest/large.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/item/chest/large.png" trans="ff00ff" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="81" name="../../tileset/item/armor/weapons_rack.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/item/armor/weapons_rack.png" width="288" height="64"/>
+ </tileset>
+ <tileset firstgid="99" name="../../tileset/logic/creature/small_animal.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/creature/small_animal.png" width="160" height="32"/>
+ </tileset>
+ <tileset firstgid="104" name="../../tileset/logic/item/sheepfood.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/item/sheepfood.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="105" name="../../tileset/logic/creature/sheep.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/creature/sheep.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="106" name="../../tileset/logic/creature/animal.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/creature/animal.png" width="864" height="32"/>
+ </tileset>
+ <tileset firstgid="133" name="../../tileset/logic/collision.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/collision.png" width="32" height="32"/>
+ </tileset>
+ <tileset firstgid="134" name="black " tilewidth="32" tileheight="32">
+  <image source="../../tileset/ground/indoor/black_hole.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="146" name="ground.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/ground/ground.png" trans="ff00ff" width="96" height="352"/>
+ </tileset>
+ <tileset firstgid="179" name="grass_edges.png" tilewidth="32" tileheight="32">
+  <image source="../../tileset/ground/grass_edges.png" trans="ff00ff" width="384" height="96"/>
+ </tileset>
+ <layer name="0_floor" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1aEOACAIRdHH39v9YYsZgttjkxtOIXgLw5AU+M5OOPvVbFI/Bva796+rDwDwy26/4w+gT5/+3L7Dul7fOWxKRzc=
+  </data>
+ </layer>
+ <layer name="1_terrain" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlskKwjAQhgfc9wVRxOUiiKLi9gLqK/ou6lk8q4/kH0hoiLE2NsnFDnynzsxP0/6TSRFRGmRikgWpH2pyIA86MSiAomEvuaZN8aKr9DpGQK2xrX8CZw0XT/pX0r/3LdH/C/07eGh4etIPC5f6ZdACY9Kf/4g/rzjQr4E6mPKe6gxg3p+BCc9rWtJnPecUzPUF77kDe4mDkivmf1z9JViBtcQmJJc9tzn/TWLLsfn//bu+8JTM+Euubf8JT8n+04UL/4mzFPuXb//J35LtX8J/6h3AZr8L//3yL7m8f1iE7V8+9K8fcm+JfqLvQT9s//OhH7WmRMHOZkIP9On9Lonai9VUKdjZTBmAIWhwmrxXwwBW8wLUW2PA
+  </data>
+ </layer>
+ <layer name="2_object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztkV0KgEAIBj1UlyioA/S/3f8QKSi9lUWxS34Dg+CTjERlULONY35Fy3aOCf4J/h8b/B1Ep2cXdlUndtQ5qFum2yIg/a2zdZ/p+Eki9PdS3dwL0j9diP7POOtuoP97eHrnoNS7orIDvZMbNg==
+  </data>
+ </layer>
+ <layer name="3_roof" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztk0kKgDAMAPMx9aw39/r/j5hCit5qQQnUGRhyDZNWBMCfXh0eTKgT7v4+jdre7HzXgQyjuqm7uaizzck83Larn9g/dU7dV7luEqSsP/+vjNg/ZOT9fwf9Af7FCRi9FQg=
+  </data>
+ </layer>
+ <layer name="4_roof_add" width="32" height="32" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="objects" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxXUDrQD0EDFQDuAzmAo+jeFRuYOtrQ4CgYfoFXaGwWjYTsKRhbIQONn4hCnJcgkrGTEAHqGOwygh/9Iig9YeJPiZ3rUEQORDkYBbgAAvz0HkA==
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32" opacity="0.37">
+  <data encoding="base64" compression="zlib">
+   eJztlEEOACEIA/m8//ZuRElBwdgmXDaFMUW3iUhjmWsmiyeiJ3IW+dw/+b6972Z5vVZV5Ufli/K93hOqzK+2qxMzK/PR/H9/f1qWmnfVE5E/emZUL/DH78w/5/7f4q+8mXytB/1feudkVwfosu54
+  </data>
+ </layer>
+ <layer name="protection" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+</map>
