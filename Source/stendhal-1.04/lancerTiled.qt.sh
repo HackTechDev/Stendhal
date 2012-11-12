@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./tiled.qt
