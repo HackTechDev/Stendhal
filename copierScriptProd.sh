@@ -1,5 +1,6 @@
 #!/bin/sh
 
 cp *.sh ../PROD
-cp Client ../PROD/Client
-cp Serveur ../PROD/Serveur
+cp Client/*.sh ../PROD/Client
+cp Serveur/*sh ../PROD/Serveur
+cp archiverStendhal.sh ..
