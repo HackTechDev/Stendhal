@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Modifie -->
 <zones xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../zones.xsd ">
 	<!--
@@ -10,76 +11,27 @@
 
 	<zone name="0_semos_mountain_n_w4" level="0" x="499616" y="499744"
 		file="Level 0/semos/mountain_n_w4.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">77</parameter>
-			<parameter name="y">47</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">v</parameter>
-			<parameter name="condition">new AlwaysFalseCondition()</parameter>
-			<parameter name="message">The gate is locked.</parameter>
-		</configurator>
-
 
 		<portal x="61" y="38" ref="kikareukin_entrance">
 			<destination zone="1_kikareukin_cave" ref="entrance" />
 		</portal>
-
-		<point-of-interest x="61" y="38">
-			<name>Kikareukin Entrance</name>
-			<type>dungeon</type>
-			<description>Entrance to Kikareukin and the way up to the sky.</description>
-			<url>http://stendhalgame.org/wiki/Kikareukin</url>
-		</point-of-interest>
-
-	</zone>
-
-	<zone name="0_semos_mountain_n2_w3" level="0" x="499616" y="499872"
-		file="Level 0/semos/mountain_n2_w3.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
-
-		<portal x="68" y="4" ref="kikareukin_exit">
+		<portal x="68" y="132" ref="kikareukin_exit">
 			<implementation
 				class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination" />
 		</portal>
-
-		<point-of-interest x="65" y="85">
-			<name>Semos Yeti Cave</name>
-			<type>dungeon</type>
-			<description>Better take something warm to dress with you when you walk there. (Player Level 80 - 200)</description>
-			<url>http://stendhalgame.org/wiki/Semos_Yeti_Cave</url>
-		</point-of-interest>
 
 	</zone>
 
 	<zone name="0_semos_mountain_n2_w2" level="0" x="499744" y="499744"
 		file="Level 0/semos/mountain_n2_w2.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 	</zone>
 
 	<zone name="0_semos_mountain_n2_w" level="0" x="499872" y="499744"
 		file="Level 0/semos/mountain_n2_w.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 
 		<entity x="77" y="127">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
 				<parameter name="sound">come_to_rest</parameter>
-				<parameter name="radius">16</parameter>
-				<parameter name="volume">120</parameter>
-			</implementation>
-		</entity>
-		
-		<entity x="44" y="9">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.LoopedAmbientSoundSource">
-				<parameter name="sound">water-5</parameter>
 				<parameter name="radius">16</parameter>
 				<parameter name="volume">120</parameter>
 			</implementation>
@@ -114,107 +66,18 @@
 	</zone>
 
 	<zone name="0_semos_mountain_n2" level="0" x="500000" y="499744"
-		file="Level 0/semos/mountain_n2_mine_town_weeks.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
-
-		<point-of-interest x="90" y="97">
-			<name>Semos Mines</name>
-			<type>dungeon</type>
-			<description>Western entrance to the Semos Mines, the city of Wofol and the huge tunnel system leading through the mountains. (Player Level 6 - 597)</description>
-			<url>http://stendhalgame.org/wiki/Semos_Mines</url>
-		</point-of-interest>
+		file="Level 0/semos/mountain_n2.tmx">
 
 		<portal x="80" y="108" ref="frank_house">
 			<destination zone="int_semos_frank_house" ref="exit" />
 		</portal>
 
-		<entity x="106" y="111">
+		<entity x="105" y="114">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Entrance just allowed for mine workers.</attribute>
+			<!-- This is actually a lie, the real reason is that we cannot tell apart
+				 if someone is behind the top of the tower or in front of it. -->
+			<attribute name="text">Because of the missing guard rail it is too dangerous to enter the tower.</attribute>
 		</entity>
-		
-		 <!-- START REMOVE AFTER MINE TOWN WEEKS -->
-		
-		                 <!-- writing on the wooden arch MINE TOWN WEEKS -->
-                 <entity x="94" y="118">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-                         <attribute name="text">Welcome to the Mine Town Revival Weeks 2012!</attribute>
-                         <attribute name="class">transparent</attribute>
-                         <attribute name="resistance">0</attribute>
-                 </entity>
- 
-                 <!-- writing on the wooden arch MINE TOWN WEEKS -->
-                 <entity x="95" y="119">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-                         <attribute name="text">Welcome to the Mine Town Revival Weeks 2012!</attribute>
-                         <attribute name="class">transparent</attribute>
-                         <attribute name="resistance">0</attribute>
-                 </entity>
- 
-                 <!-- writing on the wooden arch MINE TOWN WEEKS -->
-                 <entity x="96" y="119">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-                         <attribute name="text">Welcome to the Mine Town Revival Weeks 2012!</attribute>
-                         <attribute name="class">transparent</attribute>
-                         <attribute name="resistance">0</attribute>
-                 </entity>
- 
-                 <!-- Caroline Shop signs for MINE TOWN WEEKS -->
- 
-                 <entity x="60" y="105">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
-                         <parameter name="shop">sellrevivalweeks</parameter>
-                         <parameter name="title">Carolines snacks and drinks shop (sells)</parameter>
-                         <parameter name="seller">true</parameter>
-                         <parameter name="caption">Caroline sells snacks and drinks during the Mine Town Revival weeks.</parameter>
-                         </implementation>
- 
-                         <attribute name="class">blackboard</attribute>
- 
-             </entity>
- 
-                  <entity x="55" y="105">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
-                         <parameter name="shop">sellrevivalweeks</parameter>
-                         <parameter name="title">Carolines snacks and drinks shop (sells)</parameter>
-                         <parameter name="seller">true</parameter>
-                         <parameter name="caption">Caroline sells snacks and drinks during the Mine Town Revival weeks.</parameter>
-                         </implementation>
- 
-                         <attribute name="class">blackboard</attribute>
- 
-                   </entity>
- 
-         <!-- tables during Mine Town -->
-                 <entity x="55" y="110">
-                         <implementation
-                                 class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-                         <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
-                         <attribute name="width">4</attribute>
-                         <attribute name="height">2</attribute>
-                 </entity>
- 
-                 <entity x="61" y="110">
-                         <implementation
-                                 class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-                         <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
-                         <attribute name="width">4</attribute>
-                         <attribute name="height">2</attribute>
-                 </entity>
- 
-                 <entity x="67" y="110">
-                         <implementation
-                                 class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-                         <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
-                         <attribute name="width">4</attribute>
-                         <attribute name="height">2</attribute>
-                 </entity>
- 
- 
- <!-- END REMOVE AFTER MINE TOWN WEEKS -->
-		
 	</zone>
 
 	<zone name="int_semos_frank_house" file="interiors/semos/frank_house.tmx">
@@ -227,9 +90,6 @@
 
 	<zone name="0_semos_mountain_n2_e" level="0" x="500128" y="499744"
 		file="Level 0/semos/mountain_n2_e.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 	</zone>
 
 	<zone name="int_mithrilbourgh_stores" file="interiors/mithrilbourgh/stores.tmx">
@@ -272,9 +132,6 @@
 
 	<zone name="0_semos_mountain_n2_e2" level="0" x="500256" y="499744"
 		file="Level 0/semos/mountain_n2_e2.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 
 		<portal x="67" y="47" ref="stores_entrance">
 			<destination zone="int_mithrilbourgh_stores" ref="entrance" />
@@ -315,16 +172,10 @@
 
 	<zone name="0_semos_mountain_n_w3" level="0" x="499744" y="499872"
 		file="Level 0/semos/mountain_n_w3.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 	</zone>
 
 	<zone name="0_semos_mountain_n_w2" level="0" x="499872" y="499872"
 		file="Level 0/semos/mountain_n_w2.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
    <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn"/>
 		<configurator
 			class-name="games.stendhal.server.maps.semos.gnomevillage.GarbiddleNPC"/>
@@ -371,7 +222,7 @@
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
 			<attribute name="text">Warning: The mountain pass has been blocked by a landslide!</attribute>
 		</entity>
-		<entity x="40" y="111">
+		<entity x="40" y="110">
 		 <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
 		   <parameter name="shop">buy4gnomes</parameter>
 		   <parameter name="title">Garbiddle's shop</parameter>
@@ -918,10 +769,6 @@
 				<parameter name="volume">120</parameter>
 			</implementation>
 		</entity>
-		
-		<entity x="22" y="34">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Clock"/>
-		</entity>
 
        <portal x="21" y="6" ref="portal_from_spire_1">
           <implementation class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination"/>
@@ -953,7 +800,7 @@
 	</configurator>
     </zone>
      <!-- Plains of the wizards -->
-    <zone name="malleus_plain" file="interiors/abstract/malleus_plain.tmx" accessible="false">
+    <zone name="malleus_plain" file="interiors/abstract/malleus_plain.tmx">
 <!--        <portal x="7" y="28" ref="portal_to_malleus">
                 <destination zone="int_semos_wizards_tower_8" ref="portal_to_malleus_plain" />
             </portal> -->
@@ -977,7 +824,7 @@
 	</configurator>
     </zone>
 
-    <zone name="bone_pillar" file="interiors/abstract/malleus_plain_bone_pillar.tmx" accessible="false">
+    <zone name="bone_pillar" file="interiors/abstract/malleus_plain_bone_pillar.tmx">
         <configurator class-name="games.stendhal.server.maps.semos.wizardstower.RedDemonLordNPC" />
         <portal x="14" y="30" ref="exit_bone_pillar_1">
                 <destination zone="malleus_plain" ref="entrance_bone_pillar" />
@@ -995,9 +842,6 @@
 
        	<zone name="0_semos_plains_n" level="0" x="500000" y="499872"
 		file="Level 0/semos/plains_n.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 		<configurator class-name="games.stendhal.server.maps.semos.plains.LittleBoyNPC"/>
 		<configurator class-name="games.stendhal.server.maps.semos.plains.AddPostmanListener"/>
 		<configurator class-name="games.stendhal.server.maps.semos.city.FertileGrounds">
@@ -1005,21 +849,6 @@
 			<parameter name="y">44</parameter>
 			<parameter name="width">16</parameter>
 			<parameter name="height">26</parameter>
-		</configurator>
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">75</parameter>
-			<parameter name="y">109</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">v</parameter>
-			<parameter name="condition">new AlwaysFalseCondition()</parameter>
-			<parameter name="message">The gate is locked.</parameter>
-		</configurator>
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">83</parameter>
-			<parameter name="y">89</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">v</parameter>
-			<parameter name="autoclose">2</parameter>
 		</configurator>
 
 		<portal x="92" y="101" ref="catacombs_entrance">
@@ -1030,13 +859,6 @@
 				<parameter name="rejected">You find it hard to enter. Perhaps you're not prepared for what is below.</parameter>
 			</implementation>
 		</portal>
-
-		<point-of-interest x="92" y="101">
-			<name>Semos Catacombs</name>
-			<type>dungeon</type>
-			<description>A hole in the ground on Semos graveyard. Prepare yourself well to fight the undead.</description>
-			<url>http://stendhalgame.org/wiki/Semos_Catacombs</url>
-		</point-of-interest>
 
 		<entity x="77" y="66">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
@@ -1094,9 +916,6 @@ South: Semos city
 
 	<zone name="0_semos_plains_ne" level="0" x="500128" y="499872"
 		file="Level 0/semos/plains_ne.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 		<configurator class-name="games.stendhal.server.maps.semos.plains.MillerNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.plains.HoeingManNPC" />
 
@@ -1114,47 +933,18 @@ Southeast: Farmhouse
 
 	<zone name="0_semos_plains_n_e2" level="0" x="500192" y="499872"
 		file="Level 0/semos/plains_n_e2.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 	</zone>
 
 	<zone name="0_semos_mountain_n_e2" level="0" x="500256" y="499872"
 		file="Level 0/semos/mountain_n_e2.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
-		
-		<point-of-interest x="62" y="99">
-			<name>Semos Caves South Entrance</name>
-	 		<title>Semos Caves</title>
-			<type>dungeon</type>
-			<description>One of several entrances to the tunnel system below the northern mountains. The way to Mithrilbourgh and connection to Ados caves. (Player Level 15 - 125)</description>
-			<url>http://stendhalgame.org/wiki/Semos_Caves</url>
-		</point-of-interest>
-
-		<point-of-interest x="115" y="36">
-			<name>Semos Caves North Entrance</name>
-	 		<title>Semos Caves</title>
-			<type>dungeon</type>
-			<description>One of several entrances to the tunnel system below the northern mountains. The way to Mithrilbourgh and connection to Ados caves. Use with caution, if you are still low level. (Player Level 15 - 125)</description>
-			<url>http://stendhalgame.org/wiki/Semos_Caves</url>
-		</point-of-interest>
-
 	</zone>
 
 	<zone name="0_semos_mountain_w2" level="0" x="499744" y="500000"
 		file="Level 0/semos/mountain_w2.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 	</zone>
 
 	<zone name="0_semos_plains_w" level="0" x="499872" y="500000"
 		file="Level 0/semos/plains_w.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 		<portal x="85" y="26" ref="jail_entrance_left">
 			<destination zone="-1_semos_jail" ref="entrance" />
 		</portal>
@@ -1210,7 +1000,6 @@ The sharper minded amongst you might prefer to click directly on the creature. I
 
 	<zone name="int_semos_hostel" file="interiors/semos/hostel.tmx">
 		<configurator class-name="games.stendhal.server.maps.semos.hostel.KidsNPCs" />
-		<configurator class-name="games.stendhal.server.maps.semos.hostel.BoyNPC"/>
 
 		<entity x="9" y="3">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.LoopedAmbientSoundSource">
@@ -1229,10 +1018,8 @@ The sharper minded amongst you might prefer to click directly on the creature. I
 
 	<zone name="0_semos_village_w" level="0" x="500000" y="500000"
 		file="Level 0/semos/village_w.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 		
+		<configurator class-name="games.stendhal.server.maps.semos.village.DecencyAndMannersWardenNPC" />
         <configurator class-name="games.stendhal.server.maps.semos.village.RatsCreatures" />
 		<configurator
 			class-name="games.stendhal.server.maps.semos.village.SheepSellerNPC" />
@@ -1243,14 +1030,8 @@ The sharper minded amongst you might prefer to click directly on the creature. I
 		<portal x="29" y="40" ref="hostel_entrance">
 			<destination zone="int_semos_hostel" ref="entrance_right" />
 		</portal>
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">38</parameter>
-			<parameter name="y">42</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">h</parameter>
-			<parameter name="condition">new AlwaysFalseCondition()</parameter>
-			<parameter name="message">The gate is locked.</parameter>
-		</configurator>
+
+
 
 	<!-- 
 		<entity x="1" y="1">
@@ -1311,17 +1092,32 @@ Buy sheep from Nishiya to get the best prices!
 Talk to Sato about selling your sheep. His prices aren't very good, but unfortunately it's a buyer's market... He pays more for bigger sheep (try to get a weight of at least 100).
    </attribute>
 		</entity>
-		
-		<entity x="55" y="43">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">
-TO SEMOS
 
-Mature sheep wanted: please speak to Sato.
-   </attribute>
+		<!-- writing on the wooden arch -->
+		<entity x="57" y="42">
+			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
+			<attribute name="text">Welcome to Semos</attribute>
+			<attribute name="class">transparent</attribute>
+			<attribute name="resistance">0</attribute>
 		</entity>
 
-		<entity x="55" y="48">
+		<!-- writing on the wooden arch -->
+		<entity x="57" y="43">
+			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
+			<attribute name="text">Welcome to Semos</attribute>
+			<attribute name="class">transparent</attribute>
+			<attribute name="resistance">0</attribute>
+		</entity>
+
+		<!-- writing on the wooden arch -->
+		<entity x="57" y="44">
+			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
+			<attribute name="text">Welcome to Semos</attribute>
+			<attribute name="class">transparent</attribute>
+			<attribute name="resistance">0</attribute>
+		</entity>
+
+		<entity x="60" y="48">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
 			<attribute name="text">
 TO SEMOS
@@ -1333,112 +1129,19 @@ Mature sheep wanted: please speak to Sato.
 	</zone>
 
 	<zone name="0_semos_city" level="0" x="500064" y="500000"
-		file="Level 0/semos/city_halloween.tmx">
+		file="Level 0/semos/city.tmx">
 		<title>The City of Semos</title>
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
-		<configurator
-			class-name="games.stendhal.server.entity.mapstuff.office.StoredEntityMoveConfigurator">
-			<parameter name="oldx">44</parameter>
-			<parameter name="oldy">60</parameter>
-			<parameter name="x">45</parameter>
-			<parameter name="y">53</parameter>
-		</configurator>
 		<configurator
 			class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
-			<parameter name="x">45</parameter>
-			<parameter name="y">53</parameter>
+			<parameter name="x">44</parameter>
+			<parameter name="y">60</parameter>
 		</configurator>
 		<configurator class-name="games.stendhal.server.maps.semos.city.GossipNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.city.GreeterNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.city.HealerNPC" />
-		<configurator class-name="games.stendhal.server.maps.semos.city.OracleNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.city.RetireeNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.city.SheepBuyerNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.city.SignLessorNPC" />
-		<configurator class-name="games.stendhal.server.maps.semos.city.MagicTeacherNPC" />
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">53</parameter>
-			<parameter name="y">23</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">h</parameter>
-			<parameter name="condition">new AlwaysFalseCondition()</parameter>
-			<parameter name="message">The gate is locked.</parameter>
-		</configurator>
-
-		<!-- writing on the wooden arch -->
-		
-		<entity x="3" y="42">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-		
-		<entity x="3" y="43">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-		
-		<entity x="3" y="44">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-
-		<!-- writing on the wooden arch -->
-		<entity x="3" y="45">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-
-		<!-- writing on the wooden arch -->
-		<entity x="57" y="46">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-
-		<!-- writing on the wooden arch South -->
-		
-		<entity x="10" y="57">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-		
-		<!-- writing on the wooden arch South -->
-		
-		<entity x="9" y="57">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-		
-		<!-- writing on the wooden arch South -->
-		
-		<entity x="8" y="57">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-			<attribute name="text">Welcome to Semos</attribute>
-			<attribute name="class">transparent</attribute>
-			<attribute name="resistance">0</attribute>
-		</entity>
-		
-		<point-of-interest x="28" y="38">
-			<name>Semos Dungeon</name>
-			<type>dungeon</type>
-			<description>A dangerous place right in the center of the city. (Player Level 0 - 50)</description>
-			<url>http://stendhalgame.org/wiki/Semos_Dungeons</url>
-		</point-of-interest>
 
 		<portal x="42" y="37" ref="tavern_entrance">
 			<destination zone="int_semos_tavern_0" ref="entrance" />
@@ -1469,13 +1172,6 @@ Mature sheep wanted: please speak to Sato.
 		<portal x="52" y="19" ref="storage_entrance">
 			<destination zone="int_semos_storage_0" ref="entrance" />
 		</portal>
-
-		<point-of-interest x="18" y="21">
-			<name>Semos Bank</name>
-			<type>bank</type>
-			<description>A place to store your possessions.</description>
-			<url>http://stendhalgame.org/wiki/StendhalFAQ#Banking</url>
-		</point-of-interest>
 
 		<portal x="18" y="22" ref="bank_entrance">
 			<destination zone="int_semos_bank" ref="entrance" />
@@ -1595,17 +1291,9 @@ South: Nalwor forest and Or'ril castle
 		
 		<entity x="15" y="23">
             <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-            <attribute name="text">Outside Semos Bank, you see a huge, but fake, chest. It seems to be an advertisement.</attribute>
+            <attribute name="text">Outside Semos Bank, you see a huge chest and wonder what treasure is inside.</attribute>
             <attribute name="class">transparent</attribute>
             <attribute name="width">2</attribute>
-        </entity> 
-        
-        <entity x="5" y="20">
-            <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-            <attribute name="text">This huge book looks like a sign for Semos Library.</attribute>
-            <attribute name="class">transparent</attribute>
-            <attribute name="width">3</attribute>
-            <attribute name="height">2</attribute>
         </entity> 
 
 		<!-- wishing well outside Bank-->
@@ -1621,10 +1309,10 @@ South: Nalwor forest and Or'ril castle
 
 
 
-		<entity x="6" y="42">
+		<entity x="4" y="41">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
 			<attribute name="text">
-TO OLD SEMOS VILLAGE WEST
+TO OLD SEMOS VILLAGE
 
 Shepherds wanted: please ask Nishiya
    </attribute>
@@ -1656,22 +1344,32 @@ Caution: These dungeons contain many rats, and more dangerous creatures. Enter a
 			</implementation> </entity>
 		-->
 
-		<entity x="45" y="55">
+		<entity x="44" y="62">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
 			<attribute name="text">
-				Semos Community Chest
-			</attribute>
+TO THE PLAINS
+
+Shepherds please note: keep watch for the wolves while searching for berries here.
+   </attribute>
 		</entity>
 
-		<!--  table infront of INN -->
-		<entity x="45" y="41">
+		<!--  table on the left -->
+		<entity x="45" y="39">
 			<implementation
 				class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
 			<attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
-			<attribute name="width">4</attribute>
-			<attribute name="height">1</attribute>
+			<attribute name="width">1</attribute>
+			<attribute name="height">2</attribute>
 		</entity>
-		
+
+		<!--  table on the right -->
+		<entity x="48" y="39">
+			<implementation
+				class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
+			<attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+			<attribute name="width">1</attribute>
+			<attribute name="height">2</attribute>
+		</entity>
 
 		<!--  signs over the doors-->
 
@@ -1717,42 +1415,6 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
 			<attribute name="class">transparent</attribute>
 		</entity>
 
-
-                 <!-- START MINE TOWN WEEKS signs-->
- 
-                 <entity x="53" y="3">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
-                         <attribute name="text">#Mine #Town #Revival #Weeks #2012! Enjoy the #fourth #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #Semos #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
-                         <attribute name="width">2</attribute>
-                         <attribute name="height">2</attribute>
-                         <attribute name="class">transparent</attribute>
-                 </entity>
- 
-                 <entity x="14" y="4">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
-                         <attribute name="text">#Mine #Town #Revival #Weeks #2012! Enjoy the #fourth #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #Semos #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
-                         <attribute name="width">2</attribute>
-                         <attribute name="height">2</attribute>
-                         <attribute name="class">transparent</attribute>
-                 </entity>
- 
-                 <entity x="16" y="48">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
-                         <attribute name="text">#Mine #Town #Revival #Weeks #2012! Enjoy the #fourth #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #Semos #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
-                         <attribute name="width">2</attribute>
-                         <attribute name="height">2</attribute>
-                         <attribute name="class">transparent</attribute>
-                 </entity>
- 
-                 <entity x="58" y="49">
-                         <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign"/>
-                         <attribute name="text">#Mine #Town #Revival #Weeks #2012! Enjoy the #fourth #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #Semos #City to reach the #Mine #Town! Choose your most #favourite #colour and celebrate the festivals with your #selfmade #coloured #outfit!</attribute>
-                         <attribute name="width">2</attribute>
-                         <attribute name="height">2</attribute>
-                         <attribute name="class">transparent</attribute>
-                 </entity>
-                 
-                 <!-- END REMOVE AFTER MINE TOWN WEEKS -->
 	</zone>
 
 
@@ -1900,7 +1562,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
 			</implementation>
 		</entity>
 
-		<entity x="12" y="3">
+		<entity x="11" y="4">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
 				<parameter name="shop">buyrare</parameter>
 				<parameter name="title">McPegleg's shop</parameter>
@@ -2188,12 +1850,6 @@ Holy mackerel! These chips are tasty.
 	</zone>
 
 	<zone name="int_semos_storage_-1" file="interiors/semos/storage_-1.tmx">
-		<attributes>
-			<parameter name="color_method">multiply</parameter>
-			<parameter name="color">#413263</parameter>
-			<parameter name="blend_method">bleach</parameter>
-		</attributes>
-	
 		<portal x="26" y="10" ref="upstairs">
 			<destination zone="int_semos_storage_0" ref="downstairs" />
 		</portal>
@@ -2232,126 +1888,6 @@ Holy mackerel! These chips are tasty.
 				class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination" />
 		</portal>
 
-    <entity x="20" y="18">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a proclamation from Mayor Sakhs stating that the citizens of Semos are doing a really great job in preventing monsters from taking over the streets.  Keep up the good work.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity> 
-
-       <entity x="21" y="18">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">This is Carmen's fan.  She dropped it last time she was in here.  Hopefully she will see it next time and remove it.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="22" y="18">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a scrap of paper with nonsense on it.  Perhaps someone's attempt at humor... You know those people who work at banks ;)</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="23" y="18">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see an announcement for next month's meeting of Rat Killers Anonymous.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="24" y="18">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a sock belonging to Starkad.  Diogenes is pranking him.  :D</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="20" y="19">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a wanted poster for a dragon which is pestering citizens of Semos.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity> 
-
-       <entity x="21" y="19">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a letter to Eonna from Ados Exterminators, Inc.  Wonder why she had to get help from another town?</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="22" y="19">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see an ad to sell armor to Xin Blanca.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="23" y="19">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see Ricardo's license for gambling.  Why would it be hanging here?</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="24" y="19">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a ticket to next year's SUPERSESSION</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="20" y="20">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a locket.  Wonder who it belongs to?</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="21" y="20">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You can't see what is behind the plant.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-   
-    <entity x="22" y="20">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">Gordon, I miss you so.  Please come to see me sometime.  Sorry to have this put up on the bank bulletin board, but I don't have your address. Femme Fatale</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-
-    <entity x="23" y="20">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a map of far off Athor.  You long for a vacation.  You are thinking of visiting Athor.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
-        <entity x="24" y="20">
-     <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-       <attribute name="text">You see a shopping list, dropped by Hayunn Naratha.  Funny, most of the items are different kinds of beer and ale.</attribute>
-       <attribute name="class">transparent</attribute>
-       <attribute name="width">1</attribute>
-       <attribute name="height">1</attribute>
-    </entity>
-    
 		<entity x="2" y="2">
 			<implementation
 				class-name="games.stendhal.server.entity.mapstuff.chest.PersonalChest" />
@@ -2507,10 +2043,6 @@ Holy mackerel! These chips are tasty.
 				<parameter name="height">4</parameter>
 			</implementation>
 		</entity>
-		
-		<entity x="45" y="1">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Clock"/>
-		</entity>
 
 	</zone>
 
@@ -2588,10 +2120,9 @@ Holy mackerel! These chips are tasty.
 
 	<!-- Fin Mod -->
 
-
 	<zone name="int_semos_townhall" file="interiors/semos/townhall.tmx">
 		<configurator class-name="games.stendhal.server.maps.semos.townhall.MayorNPC" />
-		<configurator class-name="games.stendhal.server.maps.semos.townhall.DecencyAndMannersWardenNPC" />
+		<configurator class-name="games.stendhal.server.maps.semos.townhall.BoyNPC" />
 
 		<entity x="1" y="1">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -2608,10 +2139,6 @@ Holy mackerel! These chips are tasty.
 			<parameter name="max">40</parameter>
 			<parameter name="radius">7</parameter>
 		</implementation>
-		</entity>
-		
-		<entity x="7" y="0">
-			<implementation class-name="games.stendhal.server.entity.mapstuff.sign.Clock"/>
 		</entity>
 
 
@@ -2709,21 +2236,6 @@ Holy mackerel! These chips are tasty.
 
 	<zone name="0_semos_road_e" level="0" x="500128" y="500000"
 		file="Level 0/semos/road_e.tmx">
-		
-		<configurator class-name="games.stendhal.server.maps.semos.road.BoyGuardianNPC" />
-		
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">103</parameter>
-			<parameter name="y">49</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">v</parameter>
-			<parameter name="condition">new AlwaysFalseCondition()</parameter>
-			<parameter name="message">The gate is locked.</parameter>
-		</configurator>
-
 		<portal x="108" y="47" ref="pad_entrance">
 			<destination zone="int_semos_swanky_pad" ref="entrance" />
 		</portal>
@@ -2812,9 +2324,6 @@ East: Ados city
 
 	<zone name="0_semos_road_se" level="0" x="500128" y="500064"
 		file="Level 0/semos/road_se.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 	
 		<entity x="72" y="25">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -2828,9 +2337,6 @@ East: Ados city
 
 	<zone name="0_semos_plains_s" level="0" x="500000" y="500064"
 		file="Level 0/semos/plains_s.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 		
       <configurator
             class-name="games.stendhal.server.maps.semos.plains.ExperiencedWarriorNPC" />
@@ -2888,9 +2394,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="0_semos_forest_s" level="0" x="500000" y="500128"
 		file="Level 0/semos/forest_s.tmx">
-		<attributes>
-			<parameter name="color_method">time</parameter>
-		</attributes>
 		
 		<entity x="1" y="1">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -2915,7 +2418,7 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_mine_n2_w2" level="-1" x="499744" y="499744"
 		file="Level -1/semos/mine_n2_w2.tmx">
-				
+		
 		<entity x="81" y="5">
 			<implementation
 				class-name="games.stendhal.server.entity.mapstuff.useable.CoalSource" />
@@ -3052,33 +2555,8 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_mine_n2" level="-1" x="500000" y="499744"
 		file="Level -1/semos/mine_n2.tmx">
-		<configurator class-name="games.stendhal.server.maps.semos.mines.DwarfGuardianNPC" />
-		<configurator class-name="games.stendhal.server.maps.semos.mines.MinerNPC" />
-		
-		<entity x="62" y="79">
-			<implementation
-				class-name="games.stendhal.server.entity.mapstuff.useable.CoalSource" />
-		</entity>
-		
-		<entity x="56" y="86">
-			<implementation
-				class-name="games.stendhal.server.entity.mapstuff.useable.CoalSource" />
-		</entity>
-		
-		<entity x="51" y="84">
-			<implementation
-				class-name="games.stendhal.server.entity.mapstuff.useable.CoalSource" />
-		</entity>
-		
-		<entity x="51" y="78">
-			<implementation
-				class-name="games.stendhal.server.entity.mapstuff.useable.CoalSource" />
-		</entity>
-		
-		<entity x="55" y="75">
-			<implementation
-				class-name="games.stendhal.server.entity.mapstuff.useable.CoalSource" />
-		</entity>
+		<configurator
+			class-name="games.stendhal.server.maps.semos.mines.DwarfGuardianNPC" />
 			
 		<entity x="106" y="15">
 			<implementation
@@ -3139,6 +2617,7 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_mine_ne" level="-1" x="500128" y="499744"
 		file="Level -1/semos/mine_ne.tmx">
+		<configurator class-name="games.stendhal.server.maps.semos.mines.MinerNPC" />
 		
 		<entity x="79" y="107">
 			<implementation
@@ -3515,9 +2994,6 @@ Mature sheep wanted: please speak to Sato
 		<configurator class-name="games.stendhal.server.core.config.zone.NoTeleport" />
 		<configurator class-name="games.stendhal.server.maps.semos.jail.GuardNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.jail.InmateNPC" />
-		<configurator class-name="games.stendhal.server.core.config.zone.NoItemMove">
-			<parameter name="message">For security reasons, items may not be moved around in jail.</parameter>
-		</configurator>
 		<!--for the admin house-->
 		<portal x="15" y="7" ref="house_exit_4">
 			<implementation
@@ -3536,12 +3012,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_catacombs_ne" level="-1" x="500064" y="499872"
 		file="Level -1/semos/catacombs_ne.tmx">
-		<attributes>
-            <parameter name="color_method">multiply</parameter>
-            <parameter name="color">#75698c</parameter>
-            <parameter name="blend_method">bleach</parameter>
-        </attributes>
-		
 
 		<entity x="1" y="1">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -3552,12 +3022,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_catacombs_nw" level="-1" x="500000" y="499872"
 		file="Level -1/semos/catacombs_nw.tmx">
-		<attributes>
-            <parameter name="color_method">multiply</parameter>
-            <parameter name="color">#75698c</parameter>
-            <parameter name="blend_method">bleach</parameter>
-        </attributes>
-		
 
 		<entity x="1" y="1">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -3568,12 +3032,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_catacombs_se" level="-1" x="500064" y="499936"
 		file="Level -1/semos/catacombs_se.tmx">
-		<attributes>
-            <parameter name="color_method">multiply</parameter>
-            <parameter name="color">#75698c</parameter>
-            <parameter name="blend_method">bleach</parameter>
-        </attributes>
-		
 		<portal x="28" y="37" ref="entrance" replacing="true">
 			<destination zone="0_semos_plains_n" ref="catacombs_entrance" />
 		</portal>
@@ -3587,11 +3045,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_catacombs_sw" level="-1" x="500000" y="499936"
 		file="Level -1/semos/catacombs_sw.tmx">
-		<attributes>
-            <parameter name="color_method">multiply</parameter>
-            <parameter name="color">#75698c</parameter>
-            <parameter name="blend_method">bleach</parameter>
-        </attributes>
 
 		<entity x="1" y="1">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -3603,10 +3056,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-1_semos_yeti_cave" level="-1" x="499616" y="499872"
 		file="Level -1/semos/yeticave.tmx">
-        <attributes>
-         <parameter name="color_method">softlight</parameter>
-         <parameter name="color">#0099da</parameter>
-        </attributes>
 		<configurator class-name="games.stendhal.server.maps.semos.yeticave.MrYetiNPC" />
 		<configurator class-name="games.stendhal.server.maps.semos.yeticave.MrsYetiNPC" />
 	</zone>
@@ -3685,17 +3134,11 @@ Mature sheep wanted: please speak to Sato
 	<zone name="-2_semos_jail" level="-2" x="499872" y="500000"
 		file="Level -2/semos/jail.tmx">
 		<configurator class-name="games.stendhal.server.maps.semos.jail.JailKeeperNPC" />
-		<configurator class-name="games.stendhal.server.core.config.zone.NoItemMove">
-			<parameter name="message">For security reasons, items may not be moved around in jail.</parameter>
-		</configurator>
 	</zone>
 
 	<zone name="-3_semos_jail" level="-3" x="499872" y="500000"
 		file="Level -3/semos/jail_walk.tmx" accessible="false">
 		<configurator class-name="games.stendhal.server.core.config.zone.NoMoveTo" />
-		<configurator class-name="games.stendhal.server.core.config.zone.NoItemMove">
-			<parameter name="message">For security reasons, items may not be moved around in jail.</parameter>
-		</configurator>
 		<portal x="59" y="67" ref="jail_entrance_left">
 			<destination zone="int_semos_temple" ref="restart_life" />
 		</portal>
@@ -3704,11 +3147,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-2_semos_catacombs" level="-2" x="500000" y="499872"
 		file="Level -2/semos/catacombs.tmx">
-		<attributes>
-            <parameter name="color_method">multiply</parameter>
-            <parameter name="color">#806283</parameter>
-            <parameter name="blend_method">bleach</parameter>
-        </attributes>
 		<portal x="9" y="6" ref="dragon_portal_1">
 
 			<destination zone="-2_semos_catacombs" ref="dragon_portal_2" />
@@ -3906,11 +3344,6 @@ Mature sheep wanted: please speak to Sato
 
 	<zone name="-3_semos_catacombs" level="-3" x="500064" y="499872"
 		file="Level -3/semos/catacombs.tmx">
-		<attributes>
-            <parameter name="color_method">multiply</parameter>
-            <parameter name="color">#943348</parameter>
-            <parameter name="blend_method">bleach</parameter>
-        </attributes>
 		<configurator
 			class-name="games.stendhal.server.maps.semos.catacombs.VampireLordCreature" />
 		<portal x="30" y="57" ref="upstairs" replacing="true">
@@ -3947,15 +3380,6 @@ Mature sheep wanted: please speak to Sato
 	<zone name="-4_semos_dungeon" level="-4" x="500096" y="500064"
 		file="Level -4/semos/dungeon.tmx">
 		<configurator class-name="games.stendhal.server.maps.semos.dungeon.SheepBuyerNPC" />
-		<configurator class-name="games.stendhal.server.entity.mapstuff.portal.GateConfigurator">
-			<parameter name="x">61</parameter>
-			<parameter name="y">18</parameter>
-			<parameter name="image">fence_gate</parameter>
-			<parameter name="orientation">h</parameter>
-			<parameter name="condition">new AlwaysFalseCondition()</parameter>
-			<parameter name="message">The gate is locked.</parameter>
-		</configurator>
-
 		<entity x="1" y="1">
 			<implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
 				<parameter name="sound">the_forsaken_mine</parameter>
@@ -3985,7 +3409,7 @@ Mature sheep wanted: please speak to Sato
 
 	<!--
 		If we call it _jail, players can't move items around in it for
-		security reasons. This issue is fixed now.
+		security reasons
 	-->
 	<zone name="-7_kanmararn_prison" level="-7" x="500160" y="500064"
 		file="Level -7/kanmararn/jail.tmx">
@@ -4054,10 +3478,6 @@ Mature sheep wanted: please speak to Sato
 	<!--  Level 1 -->
 
 	<zone name="1_dreamscape" file="interiors/abstract/dreamscape.tmx">
-	    <attributes>
-	        <parameter name="color_method">softlight</parameter>
-            <parameter name="color">#22ffdd</parameter>
-        </attributes>
 		<!--
 			Don't allow teleporting in as we don't want marked scrolls made or ring
 			abused

@@ -2211,21 +2211,6 @@ Holy mackerel! These chips are tasty.
 		<portal x="10" y="30" ref="entrance_right">
 			<destination zone="0_semos_city" ref="bank_entrance" />
 		</portal>
-
-		<!-- Debut Mod --> 
-
-		<!--  Entrer vers la salle01 -->
-
-    		<portal x="24" y="30" ref="bank_vers_salle01_g">
-     			<destination zone="int_bank_salle01" ref="salle01_vers_bank"/>
-    		</portal>
-
-    		<portal x="25" y="30" ref="bank_vers_salle01_d">
-     			<destination zone="int_bank_salle01" ref="salle01_vers_bank"/>
-    		</portal>
-
-		<!-- Fin Mod -->
-
 		<!-- for the admin house-->
 		<portal x="24" y="8" ref="house_exit_3">
 			<implementation
@@ -2513,81 +2498,6 @@ Holy mackerel! These chips are tasty.
 		</entity>
 
 	</zone>
-
-	<!-- Debut Mod -->
-
-	<!-- Zone Salle 01 -->
-
-	<zone name="int_bank_salle01" file="interiors/semos/salle01.tmx">
-		<configurator class-name="games.stendhal.server.maps.semos.salle01.MagicienNPC" />
-    		<portal x="9" y="1" ref="salle01_vers_bank">
-     			<destination zone="int_semos_bank" ref="bank_vers_salle01_d"/>
-  		  </portal>
-
-    		<portal x="9" y="18" ref="salle01_vers_salle02">
-     			<destination zone="int_bank_salle02" ref="salle02_vers_salle01"/>
-    		</portal>
-	</zone>
-
-	<!-- Zone Salle 02 -->
-
-	<zone name="int_bank_salle02" file="interiors/semos/salle02.tmx">
-			<configurator class-name="games.stendhal.server.maps.semos.salle02.NinjaNPC" />
-    		<portal x="9" y="1" ref="salle02_vers_salle01">
-     			<destination zone="int_bank_salle01" ref="salle01_vers_salle02"/>
-    		</portal>
-    		<portal x="9" y="18" ref="salle02_vers_salle03">
-     			<destination zone="int_bank_salle03" ref="salle03_vers_salle02"/>
-    		</portal>
-	</zone>
-
-	<!-- Zone Salle 03 -->
-
-	<zone name="int_bank_salle03" file="interiors/semos/salle03.tmx">
-			<configurator class-name="games.stendhal.server.maps.semos.salle03.TechnoguerrierNPC" />
-			<configurator class-name="games.stendhal.server.maps.semos.salle03.TechnomagicienNPC" />
-    		<portal x="9" y="1" ref="salle03_vers_salle02">
-     			<destination zone="int_bank_salle02" ref="salle02_vers_salle03"/>
-    		</portal>
-    		<portal x="3" y="18" ref="salle03_vers_salle04_porte01">
-     			<destination zone="int_bank_salle04" ref="salle04_vers_salle03_porte01"/>
-    		</portal>
-    		<portal x="6" y="18" ref="salle03_vers_salle04_porte02">
-     			<destination zone="int_bank_salle04" ref="salle04_vers_salle03_porte02"/>
-    		</portal>
-    		<portal x="9" y="18" ref="salle03_vers_salle04_porte03">
-     			<destination zone="int_bank_salle04" ref="salle04_vers_salle03_porte03"/>
-    		</portal>
-    		<portal x="12" y="18" ref="salle03_vers_salle04_porte04">
-     			<destination zone="int_bank_salle04" ref="salle04_vers_salle03_porte04"/>
-    		</portal>
-    		<portal x="15" y="18" ref="salle03_vers_salle04_porte05">
-     			<destination zone="int_bank_salle04" ref="salle04_vers_salle03_porte05"/>
-    		</portal>
-	</zone>
-
-	<!-- Zone Salle 04 -->
-
-	<zone name="int_bank_salle04" file="interiors/semos/salle04.tmx">
-    		<portal x="3" y="1" ref="salle04_vers_salle03_porte01">
-     			<destination zone="int_bank_salle03" ref="salle03_vers_salle04_porte01"/>
-    		</portal>
-    		<portal x="6" y="1" ref="salle04_vers_salle03_porte02">
-     			<destination zone="int_bank_salle03" ref="salle03_vers_salle04_porte02"/>
-    		</portal>
-    		<portal x="9" y="1" ref="salle04_vers_salle03_porte03">
-     			<destination zone="int_bank_salle03" ref="salle03_vers_salle04_porte03"/>
-    		</portal>
-    		<portal x="12" y="1" ref="salle04_vers_salle03_porte04">
-     			<destination zone="int_bank_salle03" ref="salle03_vers_salle04_porte04"/>
-    		</portal>
-    		<portal x="15" y="1" ref="salle04_vers_salle03_porte05">
-     			<destination zone="int_bank_salle03" ref="salle03_vers_salle04_porte05"/>
-    		</portal>
-	</zone>
-
-	<!-- Fin Mod -->
-
 
 	<zone name="int_semos_townhall" file="interiors/semos/townhall.tmx">
 		<configurator class-name="games.stendhal.server.maps.semos.townhall.MayorNPC" />
