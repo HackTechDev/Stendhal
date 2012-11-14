@@ -4,7 +4,7 @@ STENDHAL_VERSION="1.04"
 
 echo Copie vers Client
 
-cp build/stendhal-$STENDHAL_VERSION.zip ../../../PROD/Client
+cp -f build/stendhal-$STENDHAL_VERSION.zip ../../../PROD/Client
 cd ../../../PROD/Client
-unzip stendhal-$STENDHAL_VERSION.zip
+unzip -o stendhal-$STENDHAL_VERSION.zip
 rm stendhal-$STENDHAL_VERSION.zip

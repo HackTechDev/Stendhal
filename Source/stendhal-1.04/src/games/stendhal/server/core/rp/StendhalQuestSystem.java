@@ -166,6 +166,9 @@ public class StendhalQuestSystem {
 		loadQuest(new WizardBank());
 		loadQuest(new ZekielsPracticalTestQuest());
 		loadQuest(new ZooFood());
+		loadQuest(new EpeePourMagicien());
+		loadQuest(new BatonEpine());
+		loadQuest(new EpeeTechnoguerrier());
 
 		if (System.getProperty("stendhal.minetown") != null) {
 			loadQuest(new MineTownRevivalWeeks());
