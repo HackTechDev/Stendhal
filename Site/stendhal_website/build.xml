@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<project name="Stendhal Website Job" default="build">
+	<target name="clean">
+		<delete dir="${basedir}/build" />
+	</target>
+
+	<target name="prepare">
+		<mkdir dir="${basedir}/build" />
+		<mkdir dir="${basedir}/build/coverage" />
+		<mkdir dir="${basedir}/build/docs" />
+		<mkdir dir="${basedir}/build/logs" />
+	</target>
+
+	<target name="phpdoc">
+		<exec dir="${basedir}" executable="phpdoc" failonerror="true">
+			<arg line="-t build/docs/
+					--directory .
+					-ti 'Stendhal Website PHPDoc'
+					--parseprivate on
+					--undocumentedelements on
+					--output HTML:Smarty:PHP
+					-i lib/*" />
+		</exec>
+	</target>
+
+		<target name="phpcpd">
+			<exec dir="${basedir}" executable="phpcpd" failonerror="true">
+				<arg line="--log-pmd build/logs/pmd.xml ." />
+			</exec>
+		</target>
+
+		<target name="pdepend">
+			<exec dir="${basedir}" executable="pdepend" failonerror="true">
+				<arg line="--jdepend-xml=build/logs/jdepend.xml ." />
+			</exec>
+		</target>
+
+		<target name="phpcs">
+	<!--
+			<exec dir="${basedir}" executable="phpcs" output="${basedir}/build/logs/checkstyle.xml" failonerror="false">
+				<arg line="- -report=checkstyle - -tab-width=4 content mediawiki *.php scripts tests" />
+			</exec>
+	-->
+		</target>
+
+	<target name="phpunit">
+		<exec dir="${basedir}" executable="phpunit" failonerror="false">
+			<arg line="--log-junit build/logs/junit.xml
+					--coverage-clover build/logs/clover.xml
+					--coverage-html build/coverage
+					tests/allTests.php" />
+		</exec>
+	</target>
+
+	<target name="build" depends="clean,prepare, phpdoc, pdepend, phpunit, phpcs" />
+</project>
+
