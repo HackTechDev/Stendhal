@@ -61,13 +61,18 @@ function connect() {
 	if (isset($_REQUEST) && isset($_REQUEST['test']) && $_REQUEST['test'] == 'testdb') {
 		$gamedb = getTestDB();
 	} else {
+        /*
 		$gamedb = @mysql_connect(STENDHAL_GAME_HOSTNAME, STENDHAL_GAME_USERNAME, STENDHAL_GAME_PASSWORD, true);
 		@mysql_select_db(STENDHAL_GAME_DB, $gamedb) or die( databaseConnectionErrorMessage('game database'));
+        */
+		$gamedb = @mysql_connect("localhost", "root", "mot2passe", true);
+		@mysql_select_db("marauroa", $gamedb) or die( databaseConnectionErrorMessage('game database'));
+    
 		mysql_query('set character set utf8;', $gamedb);
 	}
 
-	$websitedb = @mysql_connect(STENDHAL_WEB_HOSTNAME, STENDHAL_WEB_USERNAME, STENDHAL_WEB_PASSWORD, true);
-	@mysql_select_db(STENDHAL_WEB_DB, $websitedb) or die( databaseConnectionErrorMessage('website database') );
+	$websitedb = @mysql_connect("localhost", "root", "mot2passe", true);
+	@mysql_select_db("stendhal_website", $websitedb) or die( databaseConnectionErrorMessage('website database') );
 	mysql_query('set character set utf8;', $websitedb);
 }
 

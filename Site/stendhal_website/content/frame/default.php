@@ -58,6 +58,7 @@ class DefaultFrame extends PageFrame {
 	<div id="leftArea">
 
 		<?php 
+        $protocol = "http";
 		startBox('Game System');
 			echo '<ul id="gamemenu" class="menu">'; 
 			echo '<li><a id="menuAtlas" href="'.$protocol.'://stendhalgame.org/wiki/StendhalAtlas">Atlas</a></li>'."\n";

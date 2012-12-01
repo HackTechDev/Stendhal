@@ -67,11 +67,11 @@ class APCCacheImpl implements Cache {
 	}
 
 	function fetch($key, &$success = false) {
-		return apc_fetch($key, &$success);
+		return apc_fetch($key, $success);
 	}
 
 	function fetchAsArray($key, &$success = false) {
-		$temp = $this->fetch($key, &$success);
+		$temp = $this->fetch($key, $success);
 		if (isset($temp) && $temp !== false) {
 			return $temp->getArrayCopy();
 		}
@@ -117,7 +117,7 @@ class NonPersistentCacheImpl implements Cache {
 	}
 
 	function fetchAsArray($key, &$success = false) {
-		$temp = $this->fetch($key, &$success);
+		$temp = $this->fetch($key, $success);
 		if (isset($temp) && $temp !== false) {
 			return $temp->getArrayCopy();
 		}
