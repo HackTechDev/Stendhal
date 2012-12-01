@@ -1,0 +1,37 @@
+/*
+
+
+
+                   Not used anymore for performance reasons , see /style.css
+
+
+
+*/
+
+.status {
+	padding: 4px;
+	color: red;
+	background: url('../images/questionmark.png') no-repeat;
+	padding-left: 26px;
+}
+
+.status a {
+	color: red;
+}
+
+.stats {
+	padding: 4px;
+	font-weight: bolder;
+	display: inline;
+	text-decoration: none;
+}
+
+.small_notice {
+	font-size: 10px;
+	padding: 4px;	
+}
+
+.small_notice a {
+	color: grey;
+	text-decoration: none;
+}

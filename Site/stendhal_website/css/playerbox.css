@@ -1,0 +1,46 @@
+/*
+
+
+
+                   Not used anymore for performance reasons , see /style.css
+
+
+
+*/
+
+.playerBox {
+	padding: 2px;
+}
+
+.playerBox img {
+	float: left;
+	width: 48px;
+	height: 64px;
+	border: 1px black solid;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+.playerBox a {
+	text-decoration: none;
+}
+
+.playerBox .name {
+	font-weight: bolder;
+}
+
+.playerBox .XP {
+	font-size: 80%;
+}
+
+.playerBox .quote {
+	border: 1px black solid;
+	background-color: rgb(180, 180, 180);
+	padding: 2px 0 0 2px;
+	
+	clear: left;
+	
+	font-family: Courier New;
+	font-size: 10px;
+	line-height: 12px;
+}

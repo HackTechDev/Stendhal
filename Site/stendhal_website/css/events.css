@@ -1,0 +1,40 @@
+/*
+
+
+
+                   Not used anymore for performance reasons , see /style.css
+
+
+
+*/
+
+.event {
+	background: yellow;
+	border: 1px solid black;
+	padding: 4px;
+	margin-bottom: 4px;
+}
+
+.event .date {
+	font-family: Lucida Console, Arial, sans;
+	font-size: 60%;
+}
+
+.event img {
+	float: right;
+	margin: 2px 2px 4px 2px;
+	border: 1px solid black;
+}
+
+.event .location {
+	font-family: Arial;
+	font-size: 70%;
+}
+
+.event .description {
+	font-size: 90%;
+}
+
+.event .description a {
+	text-decoration: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Test</title>
+</head>
+
+<body id="body" onload="load()">
+
+<script type="text/javascript">
+	var httpRequest;
+	function makeRequest(url, callback) {
+		if (window.XMLHttpRequest) {
+			httpRequest = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			try {
+				httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		}
+		httpRequest.onreadystatechange = callback;
+		httpRequest.open('GET', url, true);
+		httpRequest.send(null);
+	}
+
+	function callback() {
+		if (httpRequest.readyState != 4) {
+			return;
+		}
+		if (httpRequest.status != 200) {
+			alert("Error: Could not find map");
+			return;
+		}
+
+
+		var xmldoc = httpRequest.responseXML;
+		var node = xmldoc.getElementsByTagName('layer').item(1);
+		var data = node.getElementsByTagName("data")[0];
+		var mapData = data.firstChild.nodeValue.trim();
+		alert("responseXML complete? " + (mapData.length > 5000));
+
+
+		var text = httpRequest.responseText
+		text = text.substring(text.indexOf("1_terrain"));
+		text = text.substring(text.indexOf("gzip\">") + 8)
+		text = text.substring(0, text.indexOf("</data>"))
+		alert("responseText complete? " + (text.length > 5000));
+	}
+
+	function load() {
+		makeRequest("tiled/Level%200/kalavan/city.tmx", callback);
+	}
+
+</script>
+</body>
+</html>
