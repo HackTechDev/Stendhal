@@ -201,7 +201,6 @@ function create_outfit($completeOutfit, $offset) {
  */
 function loadOrCreate($completeOutfit, $offset) {
 	$cacheIdentifier = '/tmp/outfits/'.$completeOutfit.'-'.$offset.'.png';
-
 	if (file_exists($cacheIdentifier)) {
 		readfile($cacheIdentifier);
 		return;
@@ -246,13 +245,22 @@ if (isset($_SERVER['HTTP_IF_NONE_MATCH'])) {
 	$requestedEtag = $_SERVER['HTTP_IF_NONE_MATCH'];
 }
 
+/*
 header("Content-type: image/png");
 header("Cache-Control: max-age=3888000, public"); // 45 * 24 * 60 * 60
 header('Pragma: cache');
 header('Etag: "'.$etag.'"');
+*/
 
+// Manually regenerate the character image
+// http://stendhal.localhost//createoutfit.php?outfit=31123901_0_ff5ca388_0_ffe519b2_0
+
+loadOrCreate($completeOutfit, $offset);
+
+/*
 if (isset($requestedEtag) && (($requestedEtag == $etag) || ($requestedEtag == '"'.$etag.'"'))) {
 	header('HTTP/1.0 304 Not modified');
 } else {
 	loadOrCreate($completeOutfit, $offset);
 }
+*/

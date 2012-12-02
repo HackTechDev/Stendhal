@@ -30,7 +30,7 @@
 #
 @define('STENDHAL_SERVER_STATS_XML','server_stats.xml');
 
-@define('STENDHAL_SERVER_NAME', '192.168.1.101');
+@define('STENDHAL_SERVER_NAME', 'stendhal.localhost');
 
 #
 # Website database to store news, events and other useful stuff.

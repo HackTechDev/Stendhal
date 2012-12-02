@@ -50,7 +50,9 @@ $account=$choosen->getAccountInfo();
 	<div style="float: right">
 		<?php if (($account["status"] == 'active') && ($account["charstatus"] == 'active')) {?>
 		<img class="bordered_image" src="<?php echo rewriteURL('/images/outfit/'.surlencode($choosen->outfit).'.png')?>" alt="Player outfit"/>
-		<?php }?>
+		<?php 
+        }
+        ?>
 	</div>
 	<div><span class="statslabel">Name:</span><span class="data"><?php echo htmlspecialchars($choosen->name); ?></span></div>
 	<div><span class="statslabel">Age:</span><span class="data"><?php echo htmlspecialchars(printAge($choosen->age)); ?> hours</span></div>
