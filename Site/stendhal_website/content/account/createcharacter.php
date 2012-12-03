@@ -76,7 +76,7 @@ class CreateCharacterPage extends Page {
 		$user = strtolower($_POST['name']);
 		require_once('scripts/pharauroa/pharauroa.php');
 		//$clientFramework = new PharauroaClientFramework(STENDHAL_MARAUROA_SERVER, STENDHAL_MARAUROA_PORT, STENDHAL_MARAUROA_CREDENTIALS);
-		$clientFramework = new PharauroaClientFramework("127.0.0.1", 32160, STENDHAL_MARAUROA_CREDENTIALS);
+		$clientFramework = new PharauroaClientFramework("127.0.0.1", 32160, "u39i5HpCjA6J");
 	    $template = new PharauroaRPObject();
 		$template->put('outfit', $_REQUEST['outfitcode']);
 

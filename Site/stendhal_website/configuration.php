@@ -56,6 +56,10 @@
 
 @define('STENDHAL_FRAME', 'content/frame/default.php');
 
+@define('STENDHAL_MARAUROA_SERVER', '127.0.0.1');
+@define('STENDHAL_MARAUROA_PORT', 32160);
+@define('STENDHAL_MARAUROA_CREDENTIALS', 'u39i5HpCjA6J');
+
 
 /*
  * We remove postman of the list, just in case it appears.
@@ -105,3 +109,5 @@
 
 // @define('STENDHAL_MOUSE_FLOATING_IMAGE_ON_TOP_OF_BOXES', '/images/game/pumpkin_halloween.png');
 // @define('STENDHAL_MOUSE_FLOATING_IMAGE_ON_TOP_OF_BOXES_OFFSET', '25');
+
+
