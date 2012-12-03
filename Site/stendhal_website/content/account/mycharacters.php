@@ -56,7 +56,8 @@ class MyCharactersPage extends Page {
 		if(sizeof($players)==0) {
 			echo '<div>Please <a target="_top" href="'.$createURL.'">create a new character</a>.</div>';
 		} else {
-			echo '<div>Click on a character below to play or <a href="'.$createURL.'">create a new character</a>.</div>';
+			//echo '<div>Click on a character below to play or <a href="'.$createURL.'">create a new character</a>.</div>';
+            echo '<div>Click on a character below to play.</div>';
 			echo '<div style="height: '.(ceil(count($players) / $charsPerRow) * 140) .'px">';
 			foreach($players as $p) {
 				echo '<div class="onlinePlayer characterHeight">';
