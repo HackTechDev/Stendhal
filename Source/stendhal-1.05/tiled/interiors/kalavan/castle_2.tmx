@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="32" height="16" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="castle" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/castle.png"/>
+ </tileset>
+ <tileset firstgid="321" name="collision" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/collision.png"/>
+ </tileset>
+ <tileset firstgid="322" name="ground" tilewidth="32" tileheight="32">
+  <image source="../../tileset/ground/brown.png"/>
+ </tileset>
+ <tileset firstgid="327" name="stairs" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/stairs/stairs.png"/>
+ </tileset>
+ <tileset firstgid="331" name="imperial" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/creature/human_imperial.png"/>
+ </tileset>
+ <tileset firstgid="345" name="edges" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/wall/bricked_edges.png"/>
+ </tileset>
+ <tileset firstgid="360" name="kalavan" tilewidth="32" tileheight="32">
+  <image source="../../tileset/logic/creature/human_kalavan.png"/>
+ </tileset>
+ <tileset firstgid="365" name="iron bars" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/entrance/int_iron_bars.png"/>
+ </tileset>
+ <tileset firstgid="377" name="wall thin bricks" tilewidth="32" tileheight="32">
+  <image source="../../tileset/building/wall/int_wall_thin_bricks.png"/>
+ </tileset>
+ <tileset firstgid="389" name="blood" tilewidth="32" tileheight="32">
+  <image source="../../tileset/item/blood/nsew_stains.png"/>
+ </tileset>
+ <tileset firstgid="393" name="lamp" tilewidth="32" tileheight="32">
+  <image source="../../tileset/furniture/light/small_lamp.png"/>
+ </tileset>
+ <layer name="0_floor" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAHNiZGBwGsWjeBDhcwy0wbR2L7nyxOAWNEzrONBjQMXo9qPLE8JD3X5K8aj9xOM9DMRhmNnEqqd1nhmKGACf01qSAAgAAA==
+  </data>
+ </layer>
+ <layer name="1_terrain" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYPCA/UB8gEb4IBH28zEyMFwD0iqM1MWXgGYKMRJn/ysgbcGIilOBOBqKUxgx5QnhZyTY/48B1b5oLPqiGYnHIPf+ItH+WCLUEgtiaGi/JxHqaGk/MYAc+xOAdBQBDAOE1MWTaP9VBuLy8x4oNkMThwFksctE2q9E5XyPjNWIsN+MjLxNLLbCYj8AqC15WgAIAAA=
+  </data>
+ </layer>
+ <layer name="2_object" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBQMBdDBCKFbGWlvVyeaHe2MqDQlZpEDCoBmFEJxER38PwoGN0gBpgFTBghOHYD0wALErEDMBsTs9LeeQQKIJYFYCoilKTAHAC4oDP0ACAAA
+  </data>
+ </layer>
+ <layer name="3_roof" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMAvwgl5GBIQ+K8xkH2jWjYLiDAwTwHjRMSD2pQIWRuniwAgCfdJNjAAgAAA==
+  </data>
+ </layer>
+ <layer name="4_roof_add" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCoYOMAFiUyg2GwD7WYCYFYjZgJh9AOyXAGJJIJYCYmkKzAEAB2eXqQAIAAA=
+  </data>
+ </layer>
+ <layer name="objects" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMAsIgi5F4tQEkqMUGAinUDwPBVDJnIMBgczu5ceo7yPwxChAAACMzrmYACAAA
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="16" opacity="0.33">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAHNkZGBwHMWjeBQPaowO6G0nMh+be/ABWviXVECp/ZSCUftplz7pmQ+Hm/0AU1cxWgAIAAA=
+  </data>
+ </layer>
+ <layer name="protection" width="32" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgGAWjYBSMglEwCkbBSAMAnrro8QAIAAA=
+  </data>
+ </layer>
+</map>
