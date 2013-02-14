@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo Arret Serveur Lampp Local
+echo Arret serveur Lampp Local
 ./1_arreterServeurLocal.sh
 
 echo Initialisation serveur lampp interne
