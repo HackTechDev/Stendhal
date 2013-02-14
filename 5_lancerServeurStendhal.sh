@@ -3,5 +3,5 @@
 echo Serveur Stendhal
 
 cd ./Serveur/
-./lancerServeur.sh
+xterm -title ServeurStendhal -e ./lancerServeur.sh &
 cd ..

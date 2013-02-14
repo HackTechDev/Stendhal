@@ -3,5 +3,5 @@
 echo Client Stendhal
 
 cd ./Client
-./lancerClient.sh
+xterm -title ClientStendhal -e ./lancerClient.sh &
 cd ..
