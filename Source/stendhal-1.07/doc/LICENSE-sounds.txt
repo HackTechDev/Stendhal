@@ -1,0 +1,58 @@
+These files are in the public domain:
+    alligator-1:        http://www.fws.gov/video/sound.htm
+    ambiance-church-1:  http://soundbible.com/253-Church-Bells-Ringing.html
+    ambiance-demon-1:   http://soundbible.com/1883-Scary-Demon-Haunting.html
+    ambiance-restaurant-1:
+                        http://soundbible.com/1664-Restaurant-Ambiance.html
+    bee-1:              http://soundbible.com/971-Bee.html
+    cow-1:              http://soundbible.com/1143-Cow-And-Bell.html
+    creak-2:			http://soundbible.com/1717-Creaking-Door-Spooky.html
+    elephant-1:         http://sounds.simplythebest.net/details/12/Elephant-1-sound.html
+    elephant-2:         http://publicsounds.org/animals/low-frequency-sound-produced-by-elephants/
+    elephant-3:         https://sourceforge.net/projects/myabcs
+    goat-1:             http://soundbible.com/1632-On-The-Farm.html
+    goat-2:             http://soundbible.com/1662-Farm.html
+    horse-1:            http://sounds.simplythebest.net/details/29/Horse-Neigh-sound.html
+    horse-2:            http://sounds.simplythebest.net/details/19/Horse-Exhale-sound.html
+    lion-1:             http://commons.wikimedia.org/wiki/File:Lion_raring-sound1TamilNadu178.ogg
+    lion-2:             https://sourceforge.net/projects/myabcs
+    piano-1:            
+    pig-3:              http://www.mediacollege.com/downloads/sound-effects/animals/pig/
+    roar-dragon-1:      http://www.freesound.org/people/JoelAudio/sounds/85568/
+    roar-dragon-2:      http://www.freesound.org/people/frasbr/sounds/145729/
+    roar-large-1:       http://www.freesound.org/people/ibm5155/sounds/174913/
+    robot-2:            http://commons.wikimedia.org/wiki/File:Alien_technology_scanning_device.ogg
+    robot-3:            http://soundbible.com/1758-Door-Entry-Notification.html
+    scream-fem-2:       http://soundbible.com/1627-Female-Scream-Horror.html
+    sneeze-baby-1:      http://soundbible.com/23-Baby-Sneeze.html
+    tiger-1:            http://www.mediacollege.com/downloads/sound-effects/animals/cat/tiger.html
+    tiger-2:            http://sounds.simplythebest.net/details/40/Tiger-1-sound.html
+    toilet-flush-1:     http://soundbible.com/1657-Toilet-Flushing.html
+    undead-5:           http://www.freesound.org/people/ArriGD/sounds/144005/
+    water-faucet-1		http://www.pdsounds.org/audio/download/88/faucet_water_into_sink.mp3
+    wings-flap-large-1: http://www.freesound.org/people/dave.des/sounds/127197/
+    From http://www.freewebs.com/jordansroom/sounds.html:
+        chicken-2, fire-1, mouse-2
+    From http://opengameart.org/content/monster-sound-effects-2:
+        monster-1, monster-2, monster-11, monster-12, monster-14, monster-16
+    From http://archive.org/details/unknowncobracobrabitewmv
+        snake-cobra-1, snake-cobra-2
+    From http://soundbible.com/2034-Growling-Snarling-Dogs.html
+        dog-angry-low-1, dog-snarl-1, dog-snarl-2:
+    From http://www.freesound.org/people/SmallQuadruped/sounds/42201
+        growl-large-3, grunt-large-1, grunt-large-2
+    
+
+These files are released under the following BSD license:
+    laugh-evil-1, mutant-frog-1, mutant-frog-2, robot-1, slimy-1, slimy-2, snake-2,
+    undead-1, undead-2, undead-3, undead-4, witch-cackle-1
+
+Copyright (c) 2013, Jordan Irwin
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

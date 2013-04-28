@@ -1,0 +1,51 @@
+The following images are in the public domain:
+    ground_3        http://moosader.deviantart.com/art/Public-Domain-Tiles-210769545
+    umbrella_thorn  http://opengameart.org/content/trees-1
+    toys            http://openclipart.org/detail/64909/doll-by-deluge http://openclipart.org/detail/166981/teddy-bear-by-printerkiller
+    snake_skeleton  http://commons.wikimedia.org/wiki/File:Meyer_Zeit-Vertreib_1_Tafel_088.jpg
+    myling          http://opengameart.org/content/zombie-and-skeleton-32x48
+    panel_leather_black_001:
+                    http://opengameart.org/content/leather-black
+    tail_rodent, tail_rodent_large
+                    http://www.clker.com/clipart-185713.html
+    feathered       http://openclipart.org/detail/23073/black-feather-by-beakman
+    winged_bat      http://openclipart.org/detail/2699/bat-by-machovka-2699
+    halo, halo_large, halo_large_red:
+                    http://www.clker.com/clipart-horizontal-halo.html
+    crystals:       http://www.clker.com/clipart-purple-amethyst.html
+                    http://openclipart.org/detail/173471/minerals-by-qubodup-173471
+
+The following files are released under the terms and conditions of the GPL (see license.txt).
+    mimic.png & mimic_idle.png:
+        Copyright 2013 Diligent Dodo
+    rotating_crystals, crystals, crystal_red, crystal_purple, crystal_yellow, crystal_pink, crystal_blue:
+        Copyright qubodup
+        Source: http://opengameart.org/content/rotating-crystal-animation-8-step 
+
+Permission has been granted to use the image dog_small (originally called brown_puppy). See permission_dog_small_sprite.pdf.
+    dog_small.xcf.bz2:  http://rpgmaker.net/media/content/users/17733/locker/brown_puppy.png
+
+These images are released under the following BSD license:
+    antivenom_ring                  lt_blue_drapes
+    giant_cobra                     peach_drapes
+    corpse/*huge_leafy              purple_drapes
+    corpse/*puddle*                 red_drapes
+    gnome_homes                     royal_blue_drapes
+    panel_tile_aqua_001             elvish_hat
+    corpse/*rock                    crab_meat
+    torch_2
+    giant_boulder
+    elvish_hat
+    corpse/*cloaked
+    rock
+    venom_gland
+
+Copyright (c) 2013, Jordan Irwin
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
